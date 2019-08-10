@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="/skin/css/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/js/base.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.w.js"></script>
+<script type="text/javascript" src="/skin/js/common.js"></script>
+<script type="text/javascript" src="/skin/js/form.js"></script>
+<script type="text/javascript" src="/skin/js/blockui.js"></script>
+<script type="text/javascript" src="/skin/js/velocity.min.js"></script>
+<!-reload-!>
+</head>
+<body style='background:transparent'>
+<div id='page' style='margin:auto;clear:both;overflow:hidden;position:relative;width:100%;'>
+<div id='contain' style=' background:none 0% 0% repeat scroll transparent;margin:0px auto;padding:0px'> {dede:include filename="head.htm"/}
+  <div id='content' style='width:1200px;height:696px;background:none 0% 0% repeat scroll transparent;margin:0px auto'> 
+    
+    <!-- 图片/FLASH -->
+    
+    <div id='pdv_27073' class='pdv_class' style='width:590px;height:303px;top:25px;left:0px; z-index:4'>
+      <div id='spdv_27073' class='pdv_content' style='overflow:hidden;width:100%;height:100%'>
+        <div class="pdv_border" style="margin:0;padding:0;height:100%;border:0px  solid;background:;">
+          <div style="height:25px;margin:1px;display:none;background:;">
+            <div style="float:left;margin-left:12px;line-height:25px;font-weight:bold;color:"> 图片 </div>
+            <div style="float:right;margin-right:10px;display:none"> <a style="line-height:25px;color:">更多</a> </div>
+          </div>
+          <div style="padding:0px">
+            <style>
+#pdv_27073 .wupic img{display: block;}
+#pdv_27073 .wupic .hoverimg{display: none;}
+#pdv_27073 .wupic:hover .hoverimg{display: block; position: absolute; top: 0; left: 0; z-index: 5;}
+</style>
+            <script>
+$(function(){
+	if(!1) return;
+	animate("#spdv_27073", {direction: '右', opacity: '1', distance: '650'
+		, rotation: '不旋转', scale: '小变大', delay: '0', duration: '900', easing: 'swing'});
+})
+</script>
+            <div class="wupic"> <img src="/skin/images/1500148701.jpg" border="0" width="100%" /> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- HTML编辑区 -->
+    
+    <div id='pdv_27110' class='pdv_class' style='width:421px;height:202px;top:72px;left:37px; z-index:21'>
+      <div id='spdv_27110' class='pdv_content' style='overflow:hidden;width:100%;height:100%'>
+        <div class="pdv_border" style="margin:0;padding:0;height:100%;border:0px  solid;background:;">
+          <div style="height:25px;margin:1px;display:none;background:;">
+            <div style="float:left;margin-left:12px;line-height:25px;font-weight:bold;color:"> 自定内容 </div>
+            <div style="float:right;margin-right:10px;display:none"> <a style="line-height:25px;color:">更多</a> </div>
+          </div>
+          <div style="padding:0px"> {dede:field.content/} </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 全站留言表单 -->
+    
+    <div id='pdv_27112' class='pdv_class' style='width:565px;height:233px;top:26px;left:635px; z-index:22'>
+      <div id='spdv_27112' class='pdv_content' style='overflow:hidden;width:100%;height:100%'>
+        <div class="pdv_border" style="margin:0;padding:0;height:100%;border:0px  solid;background:;">
+          <div style="height:25px;margin:1px;display:none;background:;">
+            <div style="float:left;margin-left:12px;line-height:25px;font-weight:bold;color:"> 给我留言 </div>
+            <div style="float:right;margin-right:10px;display:none"> <a style="line-height:25px;color:">更多</a> </div>
+          </div>
+          <div style="padding:0px">
+            <link href="/skin/css/feedbackform.css" rel="stylesheet" type="text/css" />
+            <script language="javascript" src="/skin/js/feedback.js"></script>
+            <div  id="notice" class="noticediv"></div>
+            <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+              <input type="hidden" name="action" value="post" />
+              <input type="hidden" name="diyid" value="1" />
+              <input type="hidden" name="do" value="2" />
+              <table width="100%" border="0" cellspacing="0" cellpadding="3" >
+                <tr>
+                  <td width="80" align="right">反馈主题：</td>
+                  <td><input type="text" name="title" value="" class="input" style="width:399px" />
+                    <font style='color:red'>*</font>
+                    <div style="padding-top:3px;color:#666"></div></td>
+                </tr>
+                <tr>
+                  <td width="80" align="right">联 系 人：</td>
+                  <td><input type="text" name="lxr" value="" class="input" style="width:399px" />
+                    <div style="padding-top:3px;color:#666"></div></td>
+                </tr>
+                <tr>
+                  <td width="80" align="right">联系电话：</td>
+                  <td><input type="text" name="tel" value="" class="input" style="width:399px" />
+                    <font style='color:red'>*</font>
+                    <div style="padding-top:3px;color:#666"></div></td>
+                </tr>
+                <tr>
+                  <td width="80" align="right">电子邮件：</td>
+                  <td><input type="text" name="email" value="" class="input" style="width:399px" />
+                    <div style="padding-top:3px;color:#666"></div></td>
+                </tr>
+                <tr>
+                  <td width="80" align="right">留言内容：</td>
+                  <td><textarea type="text" name="content" value="" class="input" style="width:399px;height:65px;"></textarea>
+                    <div style="padding-top:3px;color:#666"></div></td>
+                </tr>
+                <input type="hidden" name="dede_fields" value="title,text;lxr,text;tel,text;email,text;content,text" />
+                <input type="hidden" name="dede_fieldshash" value="73ddfe8165c82bde3e1e7576b7bf591b" />
+                <tr>
+                  <td width="80" align="right">&nbsp;</td>
+                  <td height="30"><input type="submit" name="Submit" value="提交" class="submit"></td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 图片/FLASH -->
+    
+    <div id='pdv_27113' class='pdv_class' style='width:1104px;height:324px;top:370px;left:45px; z-index:23'>
+      <div id='spdv_27113' class='pdv_content' style='overflow:visible;width:100%;'>
+        <div class="pdv_border" style="margin:0;padding:0;height:100%;border:0px  solid;background:;">
+          <div style="height:25px;margin:1px;display:none;background:;">
+            <div style="float:left;margin-left:12px;line-height:25px;font-weight:bold;color:"> 图片 </div>
+            <div style="float:right;margin-right:10px;display:none"> <a style="line-height:25px;color:">更多</a> </div>
+          </div>
+          <div style="padding:0px"> <img src="/skin/images/1500164434.png" border="0" width="100%" /> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {dede:include filename="footer.htm"/} </div>
+</body>
+</html>

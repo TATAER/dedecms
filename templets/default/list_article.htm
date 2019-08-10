@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="/skin/css/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/js/base.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.w.js"></script>
+<script type="text/javascript" src="/skin/js/common.js"></script>
+<script type="text/javascript" src="/skin/js/form.js"></script>
+<script type="text/javascript" src="/skin/js/blockui.js"></script>
+<script type="text/javascript" src="/skin/js/velocity.min.js"></script>
+<!-reload-!>
+</head>
+<body style='background:transparent'>
+<div id='page' style='margin:auto;clear:both;overflow:hidden;position:relative;width:100%;'>
+<div id='contain' style=' background:none 0% 0% repeat scroll transparent;margin:0px auto;padding:0px'> {dede:include filename="head.htm"/}
+  <div id='content' style='width:1200px;height:360px;background:none 0% 0% repeat scroll transparent;margin:0px auto'> 
+    
+    <!-- HTML编辑区 -->
+    
+    <div id='pdv_26955' class='pdv_class'  style='width:1200px;height:52px;top:306px;left:0px; z-index:20'>
+      <div id='spdv_26955' class='pdv_content' style='overflow:visible;width:100%;'>
+        <div class="pdv_border" style="margin:0;padding:0;height:100%;border:0px  solid;background:;">
+          <div style="height:25px;margin:1px;display:none;background:;">
+            <div style="float:left;margin-left:12px;line-height:25px;font-weight:bold;color:"> 自定内容 </div>
+            <div style="float:right;margin-right:10px;display:none"> <a style="line-height:25px;color:">更多</a> </div>
+          </div>
+          <div style="padding:0px">
+            <p> <br />
+            </p>
+            <p> <br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 文章翻页检索 -->
+    
+    <div id='pdv_26960' class='pdv_class'  style='width:940px;height:250px;top:39px;left:260px; z-index:21'>
+      <div id='spdv_26960' class='pdv_content' style='overflow:visible;width:100%;'>
+        <div class="pdv_border" style="margin:0;padding:0;height:100%;border:0px  solid;background:;">
+          <div style="height:25px;margin:1px;display:none;background:;">
+            <div style="float:left;margin-left:12px;line-height:25px;font-weight:bold;color:"> 文章检索 </div>
+            <div style="float:right;margin-right:10px;display:none"> <a style="line-height:25px;color:">更多</a> </div>
+          </div>
+          <div style="padding:0px">
+            <link href="/skin/css/newsquery.css" rel="stylesheet" type="text/css" />
+            <div id="newsquery">
+              <ul id="queryul">
+                {dede:list pagesize ='5'}
+                <li class="title">
+                  <div class="title"><a href="[field:arcurl/]">[field:title/]</a></div>
+                  <div class="time"></div>
+                </li>
+                {/dede:list}
+              </ul>
+            </div>
+            <div id="showpages">
+              <div id="pages">
+                <ul>
+                  {dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 文章一级分类 -->
+    
+    <div id='pdv_26959' class='pdv_class'  style='width:220px;height:200px;top:40px;left:0px; z-index:22'>
+      <div id='spdv_26959' class='pdv_content' style='overflow:visible;width:100%;'>
+        <div class="pdv_border" style="margin:0;padding:0;height:100%;border:0px  solid;background:;">
+          <div style="height:25px;margin:1px;display:none;background:;">
+            <div style="float:left;margin-left:12px;line-height:25px;font-weight:bold;color:"> 文章分类 </div>
+            <div style="float:right;margin-right:10px;display:none"> <a style="line-height:25px;color:">更多</a> </div>
+          </div>
+          <div style="padding:0px">
+            <style>
+.wupagelist2{font-family: "微软雅黑";}
+.wupagelist2 .t1,
+.wupagelist2 .t2{display: block; white-space: nowrap;}
+.wupagelist2 .t3{display: none; color: #ACB7BF;}
+.wupagelist2 .c1{position: relative; z-index: 2;}
+
+.wupagelist2 .hd{ position: relative; margin-bottom: 5px; overflow: hidden;}
+
+.wupagelist2 .hd-0{background: #0193de; line-height: 50px; font-size: 18px; font-weight: bold;
+    text-align: center; color: #fff;}
+.wupagelist2 .hd-0 .t1{display: none;}
+.wupagelist2 .hd-1{background: #00428E; color: #fff; height: 120px;}
+
+.wupagelist2 .hd-1 .t1{left: 30px; top: 20px; line-height: 50px; font-family: arial; font-size: 28px;
+    position: absolute;}
+.wupagelist2 .hd-1 .t2{left: 30px; top: 62px; font-size: 14px;
+    position: absolute;}
+.wupagelist2 .hd-2{background: #00428E; color: #00428E; border-radius: 5px;}
+.wupagelist2 .hd-2 .c1{background: #fff; border-radius: 5px; height: 100px; margin: 15px; text-align: center; }
+.wupagelist2 .hd-2 .t1{ padding-top: 10px; font-size: 36px; font-family: Times; line-height: 1;}
+.wupagelist2 .hd-2 .t2{ margin-top: 5px; font-size: 24px;}
+
+.wupagelist2 .hd-2 .c2 {
+	position: absolute;
+	left:0; top:0;
+	width:100%; height: 100%;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#33ffffff', endColorstr='#00ffffff')"; /* IE8 */
+	background: -moz-linear-gradient(left, rgba(255,255,255,.2) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, rgba(255,255,255,.2) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, rgba(255,255,255,.2) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, rgba(255,255,255,.2) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: linear-gradient(to right, rgba(255,255,255,.2) 0%, rgba(255,255,255,0) 100%);
+	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#33ffffff', endColorstr='#00ffffff'); /* IE6 & IE7 */
+}
+
+.wupagelist2 .hd-3{
+    padding-top: 10px; background: #53c2e8; text-align: center;  font-size: 14px;}
+
+.wupagelist2 .hd-3 .c1{
+    height: 90px;
+    background: #fff;
+    border: 1px dotted #3D85C6;
+    border-width: 1px 0;
+}
+.wupagelist2 .hd-3 .t1{    font-family: Times New Roman;
+    font-size: 20px;      font-style: italic;
+    padding-top: 5px;}
+.wupagelist2 .hd-3 .t2{}
+.wupagelist2 .hd-3 .t3{display: block; color: #ACB7BF;}
+.wupagelist2 .hd-3 strong{ font-size: 28px;}
+
+
+.wupagelist2 li {position: relative; overflow: hidden;}
+.wupagelist2 li span {display: none;}
+
+.wupagelist2 .s-3 span{
+	position: absolute; display:block;
+	left:0; top:0;
+	width:100%; height: 100%;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80FFFFFF', endColorstr='#19000000')"; /* IE8 */
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.5)), color-stop(100%,rgba(0,0,0,0.1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80FFFFFF', endColorstr='#19000000',GradientType=0 ); /* IE6-9 */
+}
+.wupagelist2 .s-3 li:hover span{
+	position: absolute; display:block;
+	left:0; top:0;
+	width:100%; height: 100%;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#19000000', endColorstr='#80FFFFFF')"; /* IE8 */
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.5) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.1)), color-stop(100%,rgba(255,255,255,0.5))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(255,255,255,0.5) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(255,255,255,0.5) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(255,255,255,0.5) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(255,255,255,0.5) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19000000', endColorstr='#80FFFFFF',GradientType=0 ); /* IE6-9 */
+}
+.wupagelist2 .s-3 li{border-radius: 5px;}
+
+.wupagelist2 li a{display:block;line-height: 45px; text-align: center;
+	 white-space: nowrap; font-size: 14px; text-decoration:  none; position: relative;}
+
+#pdv_26959 .wupagelist2{background-image: url(); background-position: 0 0; background-repeat: no-repeat; height:200px;}
+#pdv_26959 ul{background-color: transparent; padding: 0 0;}
+
+#pdv_26959 li{background-color: #d5a6bd;
+	margin-bottom: 5px;
+	border-width:0;
+	border-color:transparent;
+	border-style: solid; }
+#pdv_26959 li.cur,
+#pdv_26959 li:hover{border-color:transparent; background-color: #a64d79;}
+#pdv_26959 li a{ color: #ffffff; line-height:45px; font-size:14px; background-image: url();}
+#pdv_26959 li.cur a,
+#pdv_26959 li a:hover{color: #ffffff; background-image: url();}
+#pdv_26959 .hd{background: transparent; margin-bottom: 5px; }
+#pdv_26959 .hd-2 .c1{color: transparent;}
+#pdv_26959 .hd-3 .c1{color: transparent;}
+
+</style>
+            <div class="wupagelist2">
+              <ul class="s-0">
+                {dede:channel type='son' currentstyle="
+                <li class='cur'><span></span><a href='~typelink~' class='thisclass'>~typename~</a></li>
+                "}
+                <li><span></span> <a href="[field:typeurl/]" class="productclass">[field:typename/]</a> </li>
+                {/dede:channel}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

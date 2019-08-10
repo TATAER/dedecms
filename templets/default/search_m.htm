@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>搜索页_{dede:global.cfg_webname/}</title>
+<link rel="stylesheet" type="text/css" href="/m/skin/css/subpage.css">
+<script src="/m/skin/js/jquery.js"></script>
+<script src="/m/skin/js/nav.js"></script>
+<style>
+.head {
+	background: #925b94
+}
+.foot {
+	background: #000
+}
+.nav {
+	background: #925b94
+}
+.nav_color {
+	background: #000
+}
+</style>
+<script src="/m/skin/js/respond.js"></script>
+<script src="/m/skin/js/sdcms.js"></script>
+<script src="/m/skin/js/jquery.validator.js"></script>
+<link rel="stylesheet" type="text/css" href="/m/skin/css/master.css">
+<link rel="stylesheet" type="text/css" href="/m/skin/css/swiper.css">
+<script src="/m/skin/js/swipe.js"></script>
+<script src="/m/skin/js/lihe.js"></script>
+</head>
+<body>
+<!--导航开始-->
+<ul class="nav">
+  <li><a href="/m/index.php"><span class="iconfont">&#xe607;</span>首页</a></li>
+  {dede:channel type='top' row='10' currentstyle="
+  <li class='hover'><a href='/m/list.php?tid=~id~' ~rel~><span>~typename~</span></a> </li>
+  "}
+  <li><a href="/m/list.php?tid=[field:id/]" title="[field:typename/]">[field:typename/]</a></li>
+  {/dede:channel}
+</ul>
+
+<!--导航结束--> 
+
+<!--内容开始-->
+<div class="allpage">
+  <div class="black-fixed iconfont">&#xe60f;</div>
+  <!--页头开始-->
+  <div class="header">
+    <div class="head"> <a href="/m/index.php" title="首页" class="home-btn commonfont">&#xe608;</a>
+      <p class="top-title">{dede:field name='typename'/}</p>
+      <div {dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->GetOne($sql);
+        @me=is_array($row)?'class="class-btn"':'style="display:none"';
+        {/dede:field}><span class="commonfont">&#xe60a;</span></div>
+      <div class="nav-btn commonfont">&#xe60b;</div>
+    </div>
+    <div class="type">
+      <ul>
+        {dede:channel type='son' row='10' currentstyle="
+        <li class='hover'><a href='list.php?tid=~id~' ~rel~><span>~typename~</span></a> </li>
+        "}
+        <li><a href="list.php?tid=[field:id/]" title="[field:typename/]">[field:typename/]</a> <span class="commonfont class-down"></span></li>
+        {/dede:channel}
+      </ul>
+    </div>
+  </div>
+  <!--页头结束--> 
+  <!--图片列表开始-->
+  <div class="content">
+    <ul class="list-loop common_news" id="contentArea">
+      {dede:list pagesize ='6'}
+      <li class="loop news4"><a href="/m/view.php?aid=[field:id/]" title="[field:title/]"><img  src="[field:picname/]" alt="[field:title/]"><span>[field:title/]</span></a></li>
+      {/dede:list}
+    </ul>
+    <div class="pages"> {dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}</div>
+  </div>
+  
+  <!--图片列表结束--> 
+  {dede:include filename="footer_m.htm"/} </div>
+<!--内容结束-->
+</body>
+</html>
