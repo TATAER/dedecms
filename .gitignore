@@ -1,2 +1,13 @@
-data/*
+data/sessions
+data/sessions/*
+data/session*
+data/cache
+data/cache/*
+data/backupdata
+data/backupdata/*
+data/tplcache
+data/tplcache/*
+data/module
+data/module/*
+
 .idea/*
