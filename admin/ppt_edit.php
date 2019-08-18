@@ -7,7 +7,7 @@ if(empty($dopost))
 	$dopost = '';
 }
 
-$aid = ereg_replace('[^0-9]','',$aid);
+$aid = str_replace('[^0-9]','',$aid);
 $ENV_GOBACK_URL = empty($_COOKIE['ENV_GOBACK_URL']) ? "ppt_main.php" : $_COOKIE['ENV_GOBACK_URL'];
 
 if($dopost=='delete')
