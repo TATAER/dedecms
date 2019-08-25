@@ -7,8 +7,6 @@ data/backupdata
 data/backupdata/*
 data/tplcache
 data/tplcache/*
-data/module
-data/module/*
 data/.txt
 data/admin
 data/admin/*
